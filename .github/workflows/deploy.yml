@@ -30,11 +30,12 @@ jobs:
       - name: Build with Maven
         run: mvn clean verify
 
-      # SonarQube
-      - name: SonarQube Analysis
+      # SonarCloud
+      - name: SonarCloud Analysis
         run: |
           mvn sonar:sonar \
-          -Dsonar.projectKey=springboot-app \
+          -Dsonar.projectKey=TON_USERNAME_springboot-app \
+          -Dsonar.organization=TON_ORGANISATION_SONARCLOUD \
           -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} \
           -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
