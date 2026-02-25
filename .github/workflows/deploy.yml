@@ -34,8 +34,8 @@ jobs:
       - name: SonarCloud Analysis
         run: |
           mvn sonar:sonar \
-          -Dsonar.projectKey=TON_USERNAME_springboot-app \
-          -Dsonar.organization=TON_ORGANISATION_SONARCLOUD \
+          -Dsonar.projectKey=gass-organisation-devops \
+          -Dsonar.organization=Gass organisation (DevOps) \
           -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} \
           -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
